@@ -8,15 +8,11 @@ backgroundImage: url('./slides-support/common/4k-slide-bg-white.png')
 size: 16:9
 ---
 
-# Advanced C++ Course
+# UENV: CSCS approach to deploy user environments and scientific applications
 <!-- ![bg cover](../slides-support/common/4k-slide-) -->
 <!-- _paginate: skip  -->
 <!-- _class: titlecover -->
 <!-- _footer: "" -->
-
-### std::simd
-
-#### CSCS
 
 ---
 
@@ -29,13 +25,6 @@ size: 16:9
 - Data-parallel type of C++
 - Encapsulates vectorization in C++
 - Provide interface and portability
-
-### Related proposals
-
-- [P1928R11: std::simd — merge data -parallel types from the Parallelism TS 2](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p1928r11.pdf)
-- [P2876R1: Proposal to extend std::simd with more constructors and accessors](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p2876r1.html)
-- [P2664R7: Extend std::simd with permutation API](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p2664r7.html)
-- [P2964R1: Adding support for user-defined element types (UDT) in std::simd](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p2964r1.html)
 
 ---
 
