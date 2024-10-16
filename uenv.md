@@ -22,7 +22,7 @@ HPE/Cray provides a programming environment that is familiar to all users:
 
 On Alps it is installed in `/opt/cray`
 - RPMs installed via zypper
-  - CSCS can choose which RPMs to install, customization is difficult
+  - CSCS can choose which RPMs to install, 
 - Changes require rebuilding the node image and rebooting nodes
 - New release every 3 months
 
@@ -78,15 +78,24 @@ Setuid binary `squashfs-mount`, slurm-uenv-mount plugin (executed as root in rem
 2. Mount the squashfs image (under `/user-environment`)
 3. Return to unprivileged user
 
-
----
 # UENV mount points
+<div class="twocolumns">
+<div>
 
 - `/user-environment`
   - Programming Environments
-    - Compilers, MPI, libraries (e.g.: HDF5, FFTW, BLAS
+    - Compilers, MPI, libraries (e.g.: HDF5, FFTW, BLAS, etc.)
   - Application environments
-    - CP2k, GROMCAS, QE, etc ..
+    - CP2k, GROMACS, QE, etc ..
+</div>
+
+- `/user-tools`
+  - Editors / Utilities
+  - Profiler/Debuggers (Linaro Forge)
+<div>
+</div>
+</div>
+
 
 ---
 # A UENV has to be available on $SCRATCH filesystem to be used
@@ -128,7 +137,7 @@ loading the view prgenv-gnu:develop
 ---
 # SLURM plugin
 
-[https://github.com/eth-cscs/uenv2](https://github.com/eth-cscs/uenv2)
+<!-- [https://github.com/eth-cscs/uenv2](https://github.com/eth-cscs/uenv2) -->
 
 ```bash
 srun --uenv=quantumespresso --view=default pw.x < pw.in
@@ -162,6 +171,20 @@ srun pw.x < pw.in
 - Name, description, spack version: `config.yaml`
 - lmod/tcl modules: `modules.yaml`
 - Compilers: `compilers.yaml`
+
+```
+.
+├── compilers.yaml
+├── config.yaml
+├── environments.yaml
+├── modules.yaml
+└── repo
+    └── packages
+        ├── libxc
+        │   └── package.py
+        └── quantum-espresso
+            └── package.py
+```
 
 
 ---
