@@ -22,7 +22,7 @@ HPE/Cray provides a programming environment that is familiar to all users:
 
 On Alps it is installed in `/opt/cray`
 - RPMs installed via zypper
-  - CSCS can choose which RPMs to install, but can't modify them easily
+  - CSCS can choose which RPMs to install, customization is difficult
 - Changes require rebuilding the node image and rebooting nodes
 - New release every 3 months
 
@@ -276,11 +276,14 @@ spack:
   view:
       default
 ```
-
+---
 # Build pipeline / CICD
+<div align="center">
+<img src="pipeline.png", style="width: 50%" align="center" />
+</div>
 
-<img src="pipeline.png", style="width: 50%" align="right" />
-
+- Images can be built via CSCS CICD-ext
+- A user-recipe repository is planned
 
 ---
 # References
